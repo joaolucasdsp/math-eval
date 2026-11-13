@@ -1,0 +1,20 @@
+# Engineering harness contract for this repository.
+# Flat keys and inline lists only: tools read this file without a YAML parser.
+# Project facts (architecture, delivery, observability) belong in AGENTS.md.
+
+# Harness line this project was adopted or last upgraded against.
+# 0.x: "major.minor" (minor bumps are breaking). From 1.0: "major".
+harness: "0.3"
+
+# Stack profiles, applied in order. See the harness profiles/README.md.
+# None fits: a Rust binary crate.
+profiles: []
+
+# Where this project keeps Architecture Decision Records.
+adr_dir: docs/adr
+
+# The fastest check that proves the tree builds. The plugin's Stop hook runs it
+# when Claude finishes with uncommitted changes and sends Claude back when it
+# fails. Needs the dev shell's cargo on PATH (direnv or `nix develop`). Keep it
+# under a minute; leave a space before any trailing comment.
+stop_check: cargo check
