@@ -94,6 +94,7 @@ None. The binary prints to stdout; the dev shell sets `RUST_BACKTRACE=1`.
 | Item | Value |
 |---|---|
 | CI on every change | missing |
+| Merge gate (required checks and reviewers, resolved threads, stale approvals dismissed) | missing: `main` has no branch protection, ruleset, or CODEOWNERS (checked 2026-11-13) |
 | Hosting / provider | none (a local binary; no release workflow or tags) |
 | Environments | none |
 | Staging gate | missing |
